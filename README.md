@@ -1,4 +1,4 @@
-# S5-19 | 🏁 Entrega: KImóveis - TypeORM com Relacionamentos
+# Desafio FullStack
 
 Para inciar este projeto, é necessário instalar as dependências, que serão utilizadas nos testes. Portanto utilize o comando abaixo para instalar tais dependências:
 
@@ -69,9 +69,9 @@ yarn test ./scr/__tests__/integration/<subpasta>/<arquivo>
 yarn test -t <describe ou test específico envolto em aspas>
 ````
 ````
-\\ ex: yarn test -t "/categories"
-\\ rodaria os testes do describe "/categorias" no caminho
-\\ ./scr/__tests__/integration/categories/categoriesRoutes.test.ts
+\\ ex: yarn test -t "/login"
+\\ rodaria os testes do describe "/login" no caminho
+\\ ./scr/__tests__/integration/sessions/sessionRoutes.test.ts
 ````
 
 <br>
