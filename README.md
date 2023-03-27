@@ -12,7 +12,7 @@ yarn install
 **Atualize seu banco local rodando as migrações para tudo funcionar corretamente**, para isso execute o comando:
 
 ````
-yarn typeorm migration: run -d src/data-source
+yarn typeorm migration:run -d src/data-source
 ````
 
 <br>
