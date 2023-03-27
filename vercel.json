@@ -11,6 +11,15 @@
             "src": "(.*)",
             "dest": "src/server.ts"
         }
-    ]
+    ],
+    "commands": [
+        {
+          "command": "yarn typeorm migration:run -d src/data-source"
+        },
+        {
+          "command": "npm run build",
+          "use": "@vercel/node"
+        }
+      ]
     
 }
