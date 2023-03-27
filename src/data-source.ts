@@ -25,5 +25,5 @@ const AppDataSource = new DataSource(
         migrations: [createUser1679573461772]
     }
 )
-    
+
 export default AppDataSource

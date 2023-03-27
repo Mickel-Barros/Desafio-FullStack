@@ -14,8 +14,7 @@
     ],
     "commands": [
         {
-            "command": "npm run migrate",
-            "cwd": "./src"
+            "command": "yarn typeorm migration:run -d src/data-source"
         }
     ]
 }
