@@ -1,8 +1,8 @@
 import { DataSource } from "typeorm"
-import path from "path"
 import "dotenv/config"
 import { User } from "./entities/userEntity"
 import { createUser1679573461772 } from "./migrations/1679573461772-createUser"
+
 
 const AppDataSource = new DataSource(
     process.env.NODE_ENV === "test" ?

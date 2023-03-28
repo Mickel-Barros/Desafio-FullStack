@@ -1,4 +1,3 @@
-import { hashSync } from 'bcryptjs'
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, BeforeInsert, BeforeUpdate } from 'typeorm'
 
 
@@ -40,14 +39,7 @@ class User {
 
     @UpdateDateColumn()
     updatedAt: Date
-
-    @BeforeUpdate()
-    @BeforeInsert()
-    hashPassword(){
-        this.password = hashSync(this.password, 10)
-    }
     
-
 }
 
 export { User }

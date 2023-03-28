@@ -7,7 +7,7 @@ const deleteContactService = async (idUser, token): Promise<any> => {
         const userRepository = AppDataSource.getRepository(User)
         const decoded:any = jwt_decode(token)
         const user = await userRepository.findOneBy({
-            id: decoded.id
+            id: +decoded.sub
         })
         if(!user){
             throw new Error('User not found')

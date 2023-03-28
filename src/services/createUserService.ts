@@ -1,3 +1,4 @@
+import { hashSync } from 'bcryptjs'
 import { IUserRequest, IUser } from '../interfaces/users' 
 import AppDataSource from '../data-source'
 import { User } from '../entities/userEntity'
@@ -12,6 +13,8 @@ const createUserService = async(userData: IUserRequest): Promise<any> => {
         if(checkEmail){
             throw new Error('User already exists')
         }
+        const hashPassword = await hashSync(userData.password, 10)
+        userData.password = hashPassword
         const createdUser = userRepository.create(userData)
         await userRepository.save(createdUser)
         const userWithoutPassord = await userWithoutPasswordSerializer.validate(createdUser, {
